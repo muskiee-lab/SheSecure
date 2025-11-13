@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>She-Secure — Women’s Digital Safety & Cyber Awareness Hub | Muskan Singh</title>
+  <meta name="description" content="She-Secure is a mobile-first hub for women’s digital safety: Learn modules, incident-ready Action Guides and a filterable Resources directory."/>
+  <!-- OG / Preview -->
+  <meta property="og:title" content="She-Secure — Women’s Digital Safety & Cyber Awareness Hub">
+  <meta property="og:description" content="Learn modules, Action Guides and verified Resources. Privacy-first, mobile-first.">
+  <meta property="og:image" content="assets/og_she_secure_1200x630.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon_512.png">
+
+  <!-- Tailwind: enable class-based dark mode -->
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = { darkMode: 'class' };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts + small base styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .chip { padding:.25rem .6rem; border-radius:999px; border:1px solid #e5e7eb; font-size:.75rem; }
+    .fade { animation: fade .45s ease both; }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px) } to { opacity:1; transform: translateY(0) } }
+    .glass { backdrop-filter: blur(6px); background-color: rgba(255,255,255,0.6); }
+    .dark .glass { background-color: rgba(17,24,39,0.55); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- Top ribbon -->
+  <div class="w-full bg-gradient-to-r from-red-600 to-rose-500 text-white text-center py-2 text-xs sm:text-sm">
+    She-Secure — Women’s Digital Safety & Cyber Awareness Hub
+  </div>
+
+  <!-- Header with dark toggle -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-800/80 glass border-b">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#home" class="font-bold tracking-wide text-lg">She-Secure</a>
+
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <nav class="flex gap-6">
+          <a href="#about" class="hover:text-red-500">About</a>
+          <a href="#features" class="hover:text-red-500">Features</a>
+          <a href="#learn" class="hover:text-red-500">Learn</a>
+          <a href="#guides" class="hover:text-red-500">Action Guides</a>
+          <a href="#resources" class="hover:text-red-500">Resources</a>
+          <a href="#contact" class="hover:text-red-500">Contact</a>
+        </nav>
+
+        <!-- Dark mode toggle -->
+        <button id="themeToggle" aria-label="Toggle dark mode"
+                class="ml-2 inline-flex items-center gap-2 rounded-full px-3 py-1 border hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg id="iconSun" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4M12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+          <svg id="iconMoon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <span class="text-xs">Theme</span>
+        </button>
+      </div>
+
+      <!-- Mobile small controls -->
+      <div class="md:hidden flex items-center gap-2">
+        <button id="themeToggleMobile" aria-label="Toggle dark mode" class="inline-flex items-center px-2 py-1 rounded border">
+          <svg id="iconSunM" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4M12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="bg-gradient-to-b from-white to-rose-50 dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-6xl mx-auto px-4 py-14 grid lg:grid-cols-2 gap-10 items-center">
+
+      <!-- Left: text -->
+      <div class="fade">
+        <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
+          She-Secure — <span class="text-red-600 dark:text-red-400">Women’s Digital Safety & Cyber Awareness Hub</span>
+        </h1>
+
+        <p class="mt-4 text-gray-700 dark:text-gray-300 text-lg">
+          A secure, supportive space crafted to help women stay safe online — learn fast, act smart, stay protected.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-2 text-xs">
+          <span class="chip">Privacy-first</span>
+          <span class="chip">Mobile-friendly</span>
+          <span class="chip">Text + Visual</span>
+          <span class="chip">No tracking</span>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#learn" class="bg-red-600 hover:bg-red-700 text-white px-5 py-3 font-semibold rounded-lg">Start Learning</a>
+          <a href="#resources" class="border px-5 py-3 font-semibold rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">View Resources</a>
+        </div>
+      </div>
+
+      <!-- Right: SVG illustration -->
+      <div class="fade">
+        <div class="bg-white dark:bg-gray-800 border rounded-2xl p-5 shadow-sm">
+          <svg viewBox="0 0 560 400" class="w-full h-auto" role="img" aria-label="Silhouette girl with shield">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#fecaca"/>
+                <stop offset="1" stop-color="#ffe4e6"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="0" x2="1">
+                <stop offset="0" stop-color="#ef4444"/>
+                <stop offset="1" stop-color="#f97316"/>
+              </linearGradient>
+            </defs>
+
+            <ellipse cx="380" cy="200" rx="160" ry="120" fill="url(#g1)" opacity="0.7"/>
+            <rect x="110" y="250" width="220" height="18" rx="9" fill="#e5e7eb"/>
+            <rect x="140" y="180" width="260" height="80" rx="10" fill="#374151"/>
+            <rect x="150" y="190" width="240" height="60" rx="8" fill="#111827"/>
+
+            <path d="M210 135c20 0 36 16 36 36v12c0 22-18 40-40 40h-20c-10 0-18-8-18-18v-10c0-34 20-60 42-60z" fill="#fda4af"/>
+            <circle cx="216" cy="150" r="26" fill="#e11d48"/>
+            <path d="M194 140c10-18 38-20 54 2 6 9 7 20 4 30-13-14-36-10-50 6-6-10-9-23-8-38z" fill="#111827"/>
+
+            <path d="M155 210c18-24 46-28 84-8 14 8 28 20 40 34l-44 18c-28 4-58 0-88-8 0-14 3-26 8-36z" fill="#fb7185"/>
+
+            <path d="M420 120l60 18v70c0 40-28 74-60 92-32-18-60-52-60-92v-70l60-18z" fill="url(#g2)"/>
+            <path d="M394 205l20 18 32-40" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <rect x="320" y="80" width="36" height="20" rx="10" fill="#e5e7eb"/>
+            <rect x="340" y="110" width="56" height="20" rx="10" fill="#e5e7eb"/>
+            <rect x="128" y="110" width="70" height="22" rx="11" fill="#fde68a"/>
+          </svg>
+
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-3 text-center">Illustration: symbolic empowerment & protection</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT (premium) -->
+  <section id="about" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-xs text-red-700 inline-flex gap-2 mb-3">
+        <span class="chip bg-red-50 border-red-200">She-Secure</span>
+        <span class="chip">Women’s Digital Safety & Cyber Awareness</span>
+      </div>
+
+      <h2 class="text-3xl font-extrabold">About the Project</h2>
+      <p class="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+        She-Secure is a mobile-first, clean and distraction-free hub for women’s digital safety in India.
+        Bite-sized <strong>Learn</strong> modules, quick <strong>Action Guides</strong> and a searchable <strong>Resources</strong> directory help users act quickly and safely.
+      </p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+        <div class="border rounded-2xl p-5 bg-white dark:bg-gray-800 shadow-sm">
+          <div class="font-semibold">Privacy-first</div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Zero PII; quiz progress uses localStorage only.</p>
+        </div>
+        <div class="border rounded-2xl p-5 bg-white dark:bg-gray-800 shadow-sm">
+          <div class="font-semibold">Mobile-friendly</div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Fast layout for small screens & low bandwidth.</p>
+        </div>
+        <div class="border rounded-2xl p-5 bg-white dark:bg-gray-800 shadow-sm">
+          <div class="font-semibold">Text + Visual</div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Accessible illustrations and clear copy.</p>
+        </div>
+        <div class="border rounded-2xl p-5 bg-white dark:bg-gray-800 shadow-sm">
+          <div class="font-semibold">Future scope</div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Admin panel, PWA, multilingual support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES (premium) -->
+  <section id="features" class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">Core Features</h2>
+      <p class="text-gray-600 dark:text-gray-300 mt-2">Learn fast, act confidently, find verified help.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+        <div class="border rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold">Learn Hub</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Digital hygiene, 2FA, social privacy — with mini quizzes.</p>
+        </div>
+
+        <div class="border rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold">Action Guides</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Step-by-step playbooks for sextortion, cyberstalking and hacked accounts.</p>
+        </div>
+
+        <div class="border rounded-2xl p-6 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold">Resources</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Filterable directory of cyber cells, NGOs, helplines and counselors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARN HUB -->
+  <section id="learn" class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-end">
+        <h2 class="text-2xl font-bold">Learn Hub</h2>
+        <button id="resetProgress" class="underline text-sm">Reset Progress</button>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
+        <div class="border rounded-2xl p-5 bg-white dark:bg-gray-800 shadow-sm">
+          <h3 class="font-semibold">Digital Hygiene</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Updates, backups, safe browsing.</p>
+          <button onclick="openModule('hygiene')" class="mt-3 border rounded-lg px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700">Open Module</button>
+          <div id="progress-hygiene" class="text-xs text-gray-500 mt-2">Progress: 0/3</div>
+        </div>
+
+        <div class="border rounded-2xl p-5 bg-white dark:bg-gray-800 shadow-sm">
+          <h3 class="font-semibold">Passwords & 2FA</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Manager, authenticator app, recovery codes.</p>
+          <button onclick="openModule('twofa')" class="mt-3 border rounded-lg px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700">Open Module</button>
+          <div id="progress-twofa" class="text-xs text-gray-500 mt-2">Progress: 0/3</div>
+        </div>
+
+        <div class="border rounded-2xl p-5 bg-white dark:bg-gray-800 shadow-sm">
+          <h3 class="font-semibold">Social Privacy</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Tagging, reporting, location settings.</p>
+          <button onclick="openModule('privacy')" class="mt-3 border rounded-lg px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700">Open Module</button>
+          <div id="progress-privacy" class="text-xs text-gray-500 mt-2">Progress: 0/3</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE MODAL -->
+  <div id="moduleModal" class="modal">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-2xl w-full p-6 shadow-lg">
+      <div class="flex justify-between items-start">
+        <h3 id="moduleTitle" class="text-lg font-semibold"></h3>
+        <button onclick="closeModule()" class="text-2xl leading-none">×</button>
+      </div>
+
+      <div id="moduleBody" class="mt-4 space-y-3 text-sm text-gray-700 dark:text-gray-300"></div>
+
+      <div class="mt-6 flex justify-end gap-3">
+        <button onclick="startQuiz()" class="border px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">Take Quiz</button>
+        <button onclick="closeModule()" class="bg-gray-900 text-white px-4 py-2 rounded-lg">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTION GUIDES -->
+  <section id="guides" class="py-12 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Action Guides — What to do now?</h2>
+      <div class="grid md:grid-cols-2 gap-5 mt-6">
+        <details class="bg-red-50 dark:bg-red-900/30 border border-red-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">Sextortion</summary>
+          <ol class="list-decimal pl-6 text-sm mt-3 space-y-2">
+            <li>Do not pay or engage further.</li>
+            <li>Take screenshots & save evidence.</li>
+            <li>Change passwords & enable 2FA.</li>
+            <li>Report via platform & cyber cell.</li>
+          </ol>
+        </details>
+
+        <details class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">Cyberstalking</summary>
+          <ol class="list-decimal pl-6 text-sm mt-3 space-y-2">
+            <li>Document incidents safely.</li>
+            <li>Block & tighten privacy.</li>
+            <li>Disable location sharing.</li>
+            <li>Escalate to officials with proof.</li>
+          </ol>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="resources" class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Verified Resources (demo)</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Filter by type / state to find quick help.</p>
+
+      <div class="grid md:grid-cols-4 gap-3 mt-4">
+        <input id="searchText" class="md:col-span-2 border rounded-lg px-4 py-2.5" placeholder="Search by name or city…"/>
+        <select id="filterType" class="border rounded-lg px-3 py-2.5">
+          <option value="">All types</option>
+          <option>Cyber Cell</option><option>NGO</option><option>Official Portal</option><option>Counseling</option>
+        </select>
+        <select id="filterState" class="border rounded-lg px-3 py-2.5">
+          <option value="">All states</option>
+          <option>Bihar</option><option>Uttar Pradesh</option><option>Delhi</option><option>Uttarakhand</option><option>Maharashtra</option>
+        </select>
+      </div>
+
+      <div id="resourceList" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"></div>
+    </div>
+  </section>
+
+  <!-- HOW TO RUN + DEPLOY -->
+  <section id="howto" class="py-12 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Run & Deploy</h2>
+      <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 space-y-3">
+        <div>
+          <strong>Run locally</strong>
+          <ol class="list-decimal pl-5 mt-2 space-y-1">
+            <li>Open project folder in VS Code.</li>
+            <li>Right-click <code>index.html</code> → <b>Open with Live Server</b>.</li>
+            <li>Edit & preview instantly.</li>
+          </ol>
+        </div>
+
+        <div>
+          <strong>Deploy to GitHub Pages (simple)</strong>
+          <ol class="list-decimal pl-5 mt-2 space-y-1">
+            <li>Create a new GitHub repo (public or private).</li>
+            <li>Commit your project (index.html and assets/).</li>
+            <li>In repo → Settings → Pages → set branch to <code>main</code> (or <code>gh-pages</code>) and root folder → Save.</li>
+            <li>After a minute, your site will be live at <code>https://&lt;your-username&gt;.github.io/&lt;repo-name&gt;/</code>.</li>
+          </ol>
+        </div>
+
+        <div>
+          <strong>Custom domain (optional)</strong>
+          <ol class="list-decimal pl-5 mt-2 space-y-1">
+            <li>Buy domain (e.g., from Namecheap / GoDaddy).</li>
+            <li>In GitHub Pages settings add your custom domain.</li>
+            <li>Follow GitHub’s DNS instructions — add A / CNAME records to your domain registrar.</li>
+            <li>Wait for DNS propagation (usually minutes–hours).</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-sm mt-2">For screenshots, collaboration, or code: connect on LinkedIn or GitHub.</p>
+
+      <div class="mt-4 flex flex-wrap gap-2 text-sm">
+        <a href="#" class="border px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">LinkedIn</a>
+        <a href="#" class="border px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">GitHub</a>
+        <a href="mailto:example@mail.com" class="border px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREMIUM FOOTER -->
+  <footer class="border-t bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <div class="font-semibold">She-Secure</div>
+        <div class="text-sm text-gray-600 dark:text-gray-300">Women’s Digital Safety & Cyber Awareness Hub — Built by Muskan Singh</div>
+      </div>
+
+      <div class="flex gap-4">
+        <!-- Inline social icons -->
+        <a href="#" class="flex items-center gap-2 text-sm hover:text-red-500">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.866-.013-1.7-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.607.069-.607 1.004.071 1.532 1.03 1.532 1.03.892 1.528 2.341 1.087 2.91.832.091-.647.35-1.087.637-1.337-2.222-.252-4.555-1.111-4.555-4.944 0-1.091.39-1.983 1.03-2.682-.103-.253-.447-1.27.098-2.645 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.294 2.748-1.025 2.748-1.025.546 1.375.202 2.392.1 2.645.64.699 1.028 1.591 1.028 2.682 0 3.842-2.337 4.688-4.567 4.936.359.31.679.92.679 1.855 0 1.337-.012 2.415-.012 2.744 0 .268.18.58.688.482C19.138 20.165 22 16.418 22 12z"/></svg>
+          GitHub
+        </a>
+
+        <a href="#" class="flex items-center gap-2 text-sm hover:text-red-500">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.686 0 0 2.686 0 6v12c0 3.314 2.686 6 6 6h14c3.314 0 6-2.686 6-6V6c0-3.314-2.686-6-6-6zM7.5 19H5v-8h2.5v8zM6.25 9.875C5.34 9.875 4.59 9.125 4.59 8.215c0-.91.75-1.66 1.66-1.66.92 0 1.67.75 1.67 1.66 0 .91-.75 1.66-1.67 1.66zM20 19h-2.5v-4.2c0-1.01-.02-2.31-1.4-2.31-1.4 0-1.61 1.09-1.61 2.24V19H12V10.8h2.4v1.14h.03c.33-.62 1.14-1.27 2.34-1.27 2.5 0 2.96 1.65 2.96 3.79V19z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS: theme, modules, resources -->
+  <script>
+    // THEME: persist in localStorage
+    const root = document.documentElement;
+    const themeKey = 'sheSecureTheme';
+    const setTheme = (dark) => {
+      if (dark) root.classList.add('dark'); else root.classList.remove('dark');
+      localStorage.setItem(themeKey, dark ? 'dark' : 'light');
+      // icons
+      document.getElementById('iconSun')?.classList.toggle('hidden', dark);
+      document.getElementById('iconMoon')?.classList.toggle('hidden', !dark);
+      document.getElementById('iconSunM')?.classList.toggle('hidden', dark);
+    };
+    // initial
+    const saved = localStorage.getItem(themeKey);
+    if (saved === 'dark') setTheme(true);
+    else if (saved === 'light') setTheme(false);
+    else {
+      // default: follow prefers-color-scheme
+      const prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefers);
+    }
+    // toggles
+    document.getElementById('themeToggle')?.addEventListener('click', () => {
+      const dark = !root.classList.contains('dark'); setTheme(dark);
+    });
+    document.getElementById('themeToggleMobile')?.addEventListener('click', () => {
+      const dark = !root.classList.contains('dark'); setTheme(dark);
+    });
+
+    // Year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // MODULES & QUIZ
+    const MODULES = {
+      hygiene: {
+        title: 'Digital hygiene',
+        body: ['Keep apps updated.', 'Back up photos/docs.', 'Avoid unknown links.'],
+        quiz: [
+          { q: 'Do updates fix bugs? Yes/No', a: 'yes' },
+          { q: 'Reuse passwords? Yes/No', a: 'no' },
+          { q: 'Open short unknown links? Yes/No', a: 'no' }
+        ]
+      },
+      twofa: {
+        title: 'Passwords & 2FA',
+        body: ['Use a manager', 'Prefer authenticator app', 'Store recovery codes offline'],
+        quiz: [
+          { q: 'Best 2FA? SMS/App', a: 'app' },
+          { q: 'Unique passwords needed? Yes/No', a: 'yes' },
+          { q: 'Where store recovery codes?', a: 'offline' }
+        ]
+      },
+      privacy: {
+        title: 'Social privacy',
+        body: ['Review visibility', 'Know block/report', 'Disable location when not needed'],
+        quiz: [
+          { q: 'Share phone publicly? Yes/No', a: 'no' },
+          { q: 'Blocking hides profile? Yes/No', a: 'yes' },
+          { q: 'Always keep location on? Yes/No', a: 'no' }
+        ]
+      }
+    };
+
+    let currentModule = null;
+    function openModule(key){
+      currentModule = key;
+      const m = MODULES[key];
+      document.getElementById('moduleTitle').textContent = m.title;
+      document.getElementById('moduleBody').innerHTML = m.body.map(x=>`<p>• ${x}</p>`).join('');
+      document.getElementById('moduleModal').classList.add('show');
+    }
+    function closeModule(){ document.getElementById('moduleModal').classList.remove('show'); }
+    function startQuiz(){
+      const m = MODULES[currentModule];
+      if (!m) return alert('Open a module first.');
+      let score = 0;
+      for (const it of m.quiz){
+        const ans = (prompt(it.q) || '').trim().toLowerCase();
+        if (ans === it.a.toLowerCase()) score++;
+      }
+      alert(`Score: ${score}/${m.quiz.length}`);
+      localStorage.setItem(`progress-${currentModule}`, score);
+      updateProgress();
+      closeModule();
+    }
+    function updateProgress(){
+      Object.keys(MODULES).forEach(k=>{
+        const v = localStorage.getItem(`progress-${k}`) || 0;
+        const el = document.getElementById(`progress-${k}`);
+        if (el) el.textContent = `Progress: ${v}/${MODULES[k].quiz.length}`;
+      });
+    }
+    updateProgress();
+    document.getElementById('resetProgress')?.addEventListener('click', ()=>{
+      Object.keys(MODULES).forEach(k=>localStorage.removeItem(`progress-${k}`));
+      updateProgress();
+    });
+
+    // RESOURCES demo + filters
+    const RESOURCES = [
+      { name:'Bihar State Cyber Cell (Helpline)', type:'Cyber Cell', city:'Patna', state:'Bihar', contact:'1930' },
+      { name:'Women Helpline – Bihar', type:'Official Portal', city:'Patna', state:'Bihar', contact:'1091' },
+      { name:'Sakhi One Stop Center', type:'NGO', city:'Ara', state:'Bihar', contact:'District OSC' },
+      { name:'Delhi Women Helpline', type:'Official Portal', city:'New Delhi', state:'Delhi', contact:'1091' },
+      { name:'Uttarakhand Cyber Cell', type:'Cyber Cell', city:'Dehradun', state:'Uttarakhand', contact:'1930' },
+      { name:'CounselCare (demo)', type:'Counseling', city:'Lucknow', state:'Uttar Pradesh', contact:'+91-98xxxxxx' }
+    ];
+
+    const searchText = document.getElementById('searchText');
+    const filterType = document.getElementById('filterType');
+    const filterState = document.getElementById('filterState');
+    const resourceList = document.getElementById('resourceList');
+
+    function renderResources(){
+      const q = (searchText.value||'').toLowerCase();
+      const t = filterType.value;
+      const s = filterState.value;
+      const list = RESOURCES.filter(r =>
+        (!t || r.type===t) && (!s || r.state===s) &&
+        (!q || r.name.toLowerCase().includes(q) || r.city.toLowerCase().includes(q))
+      );
+      resourceList.innerHTML = list.map(r=>`
+        <div class="border rounded-2xl p-4 bg-white dark:bg-gray-800 shadow-sm">
+          <div class="text-sm text-gray-500 dark:text-gray-300">${r.type}</div>
+          <div class="font-semibold mt-1">${r.name}</div>
+          <div class="text-sm mt-1">${r.city}, ${r.state}</div>
+          <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">Contact: ${r.contact}</div>
+        </div>
+      `).join('');
+    }
+
+    [searchText, filterType, filterState].forEach(el=>{
+      el?.addEventListener('input', renderResources);
+      el?.addEventListener('change', renderResources);
+    });
+    renderResources();
+
+    // expose for inline onclick handlers
+    window.openModule = openModule;
+    window.closeModule = closeModule;
+    window.startQuiz = startQuiz;
+  </script>
+</body>
+</html>
